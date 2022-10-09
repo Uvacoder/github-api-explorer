@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+(feature/prettier)
+## Added
+- build: eslint-config-prettier
+
+## Changed
+- config: added `prettier` and `eslint:recommended` to ESLint config
+
 (feature/nextjs)
 ### Added
 - Bootstrapped project
