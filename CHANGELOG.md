@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+(feature/testing-setup)
+## Added
+- build: jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom eslint-plugin-testing-library
+- config: added `jest.config.js` and `jest.setup.js`
+
+## Changed
+- config: added `plugin:testing-library/react` to ESLint config
+- config: added env{ es6, jest } to ESLint config
+
 ## [0.0.1] - 2022-10-09
 ## Added
 - chore: bootstrapped nextjs project
