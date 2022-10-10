@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+(feature/delete-homepage)
+## Changed
+- default home renders `/topics/react` via config rewrites (old homepage was deleted)
+
 (feature/route-topic)
 ## Added
 - config: `.env.example`
