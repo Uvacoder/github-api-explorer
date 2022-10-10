@@ -7,17 +7,10 @@
   --color-warning: #f5a623;
   --color-danger: #f00;
   --color-header-background: rgba(255 255 255 / .75);
-
-  /* https://noeldelgado.github.io/shadowlord/#f5f5fa */
   --accents-1: #f5f5fa;
   --accents-2: #dddde1;
-  --accents-3: #c4c4c8;
-  --accents-4: #acacaf;
-  --accents-5: #939396;
-  --accents-6: #7b7b7d;
-
-  --shadow-smallest: 0px 2px 4px rgba(0,0,0,.1);
-  --shadow-small: 0 5px 10px rgba(0,0,0,.12);
+  --shadow-smallest: 0px 2px 4px rgba(0 0 0 / .1);
+  --shadow-small: 0 5px 10px rgba(0 0 0 / .12);
   --outline: 0 0 0 2px rgb(0 112 243 / .5);
 }
 
@@ -31,7 +24,6 @@ html,
 body {
   height: 100%;
 }
-
 
 body {
   font-size: 16px;
@@ -62,8 +54,18 @@ svg {
   html {
     color-scheme: dark;
   }
-  body {
-    color: white;
-    background: black;
+
+  :root {
+    --color-background: #252525;
+    --color-foreground: #fafafa;
+    --color-primary: #539bf5;
+    --color-warning: #f5a623;
+    --color-danger: #f00;
+    --color-header-background: rgba(37 37 37 / .5);
+    --accents-1: #191919;
+    --accents-2: #303030;
+    --shadow-smallest: 0px 2px 4px rgba(0 0 0 / .1);
+    --shadow-small: 0 5px 10px rgba(0 0 0 / .12);
+    --outline: 0 0 0 2px rgb(83 155 245 / .5);
   }
 }
