@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+(feature/search)
+## Added
+- build: testing-library/user-event
+- feat: searchbox on header { components/{ Search, Header }
+
 (feature/delete-homepage)
 ## Changed
 - default home renders `/topics/react` via config rewrites (old homepage was deleted)
