@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { normalizeTopicName } from '~/utils/topic';
+import StarsCounter from '~/components/StarsCounter';
 import { fetchGQL } from '~/utils/fetchers';
 
 export default function TopicPage({ data }) {
@@ -17,7 +18,14 @@ export default function TopicPage({ data }) {
       </Head>
 
       <h1>{data.topic.name}</h1>
+
+      <div className="stars u-df u-jcc">
+        <StarsCounter count={data.topic.stargazerCount} />
+        <span>stars</span>
+      </div>
+
       <h2>Related topics</h2>
+
       {data.topic.relatedTopics.map((topic) => (
         <Link
           href={`/topics/${topic.name}`}
