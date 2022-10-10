@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+(feature/footer)
+## Added
+- build: swr
+- feat: footer with components/RateLimit
+
 (feature/search)
 ## Added
 - build: testing-library/user-event
