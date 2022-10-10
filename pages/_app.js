@@ -1,4 +1,5 @@
 import Header from '~/components/Header';
+import Footer from '~/components/Footer';
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -8,6 +9,7 @@ function MyApp({ Component, pageProps }) {
       <main className="u-df u-jcc">
         <Component {...pageProps} />
       </main>
+      <Footer />
 
       <style jsx>{`
         main {
