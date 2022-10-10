@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import { normalizeTopicName } from '~/utils/topic';
 import { fetchGQL } from '~/utils/fetchers';
@@ -5,6 +6,16 @@ import { fetchGQL } from '~/utils/fetchers';
 export default function TopicPage({ data }) {
   return (
     <div>
+      <Head>
+        <title>
+          {`${data.topic.name} - GitHub Topic Explorer`}
+        </title>
+        <meta
+          name="description"
+          content={`"${data.topic.name}", has {data.topic.relatedTopics.length} related topics.`}
+        />
+      </Head>
+
       <h1>{data.topic.name}</h1>
       <h2>Related topics</h2>
       {data.topic.relatedTopics.map((topic) => (
