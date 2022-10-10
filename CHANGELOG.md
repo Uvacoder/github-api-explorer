@@ -6,58 +6,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-(feature/style-updates)
+## [0.1.0] - 2022-10-09
 ## Added
+- build: dependencies: `swr`, `jest`, `jest-environment-jsdom`,
+  `testing-library/react`, `testing-library/jest-dom`,
+  `eslint-plugin-testing-library`, `testing-library/user-event`
+- tests: using jest and react-testing-library
+- config: `.env.example`
+- config: `~/` absolute paths support (`jsconfig.json`)
+- utils: topic{normalizeTopicName}, fetchers{fetcher, fetchGQL}
+- feat: pages: topics/[topic]
+- feat: header searchbox
+- feat: footer with rate-limit component
 - color-scheme: dark support
 
-(feature/page-404)
-## Added
-- custom 404 page to avoid style overrides showing scrollbar
-
-(feature/page-topic-styles)
-## Added
-- components: StarsCounter
-- components: TopicPill
-- seo: topics page: added title and description meta tags-
-
 ## Changed
-- pages: topic: updated styles
+- homepage now displays `/topics/react` via config rewrites
+- config: ESLint: added `plugin:testing-library/react` and env{es6, jest}
 
-(feature/footer)
-## Added
-- build: swr
-- feat: footer with components/RateLimit
-
-(feature/search)
-## Added
-- build: testing-library/user-event
-- feat: searchbox on header { components/{ Search, Header }
-
-(feature/delete-homepage)
-## Changed
-- default home renders `/topics/react` via config rewrites (old homepage was deleted)
-
-(feature/route-topic)
-## Added
-- config: `.env.example`
-- config: `jsconfig.json` absolute paths support using `~/`
-- utils(topic) { normalizeTopicName } function
-- utils(fetchers) { fetcher, fetchGQL } functions
-- pages: topics/[topic]
-
-## Changes
-- config: jest: add coverage options
-- config: jest: add moduleNameMapper for jest to resolve absolute path modules
-
-(feature/testing-setup)
-## Added
-- build: jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom eslint-plugin-testing-library
-- config: added `jest.config.js` and `jest.setup.js`
-- config: test scripts to package.json `yarn test`
-
-## Changed
-- config: added `plugin:testing-library/react` to ESLint config
-- config: added env{ es6, jest } to ESLint config
+## Fixed
+- custom 404 page to avoid style issues
 
 ## [0.0.1] - 2022-10-09
 ## Added
@@ -67,3 +35,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Changed
 - config: added `prettier` and `eslint:recommended` to ESLint config
 
+[Unreleased]: https://github.com/noeldelgado/gh-topic-explorer/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/noeldelgado/gh-topic-explorer/compare/v0.0.1...v0.1.0
