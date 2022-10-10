@@ -24,3 +24,11 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Tests
+
+```bash
+npm run test:ci
+# or
+yarn test:ci
+``
