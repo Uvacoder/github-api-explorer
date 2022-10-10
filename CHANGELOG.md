@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+(feature/page-topic-styles)
+## Added
+- components: StarsCounter
+- components: TopicPill
+- seo: topics page: added title and description meta tags-
+
+## Changed
+- pages: topic: updated styles
+
 (feature/footer)
 ## Added
 - build: swr

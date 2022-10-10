@@ -4,6 +4,7 @@
   --color-background: #fff;
   --color-foreground: #0f172a;
   --color-primary: #0070f3;
+  --color-warning: #f5a623;
   --color-danger: #f00;
   --color-header-background: rgba(255 255 255 / .75);
 
@@ -16,6 +17,7 @@
   --accents-6: #7b7b7d;
 
   --shadow-smallest: 0px 2px 4px rgba(0,0,0,.1);
+  --shadow-small: 0 5px 10px rgba(0,0,0,.12);
   --outline: 0 0 0 2px rgb(0 112 243 / .5);
 }
 

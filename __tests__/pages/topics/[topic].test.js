@@ -1,7 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import PageTopic, { getServerSideProps } from '~/pages/topics/[topic]';
+import StarsCounter from '~/components/StarsCounter';
+import TopicPill from '~/components/TopicPill';
 import { fetchGQL } from '~/utils/fetchers';
 
+jest.mock('~/components/StarsCounter');
+jest.mock('~/components/TopicPill');
 jest.mock('~/utils/fetchers', () => {
   const original = jest.requireActual('~/utils/fetchers');
   return {
@@ -9,6 +13,9 @@ jest.mock('~/utils/fetchers', () => {
     fetchGQL: jest.fn(),
   };
 });
+
+StarsCounter.mockReturnValue(<div data-testid="stars-counter" />);
+TopicPill.mockReturnValue(<div data-testid="topic-pill" />);
 
 describe('pages/topics/[topic]', () => {
   const MOCK_DATA = {
@@ -42,11 +49,18 @@ describe('pages/topics/[topic]', () => {
     expect(h2).toHaveLength(1);
   });
 
-  it('should display related topics', () => {
+  it('should display related topics (components/TopicPill)', () => {
     render(<PageTopic data={MOCK_DATA}  />);
 
-    expect(screen.getAllByTestId('topic-item'))
+    expect(screen.getAllByTestId('topic-pill'))
       .toHaveLength(2);
+  });
+
+  it('should display stargazers count (components/StarsCounter)', () => {
+    render(<PageTopic data={MOCK_DATA}  />);
+
+    expect(screen.getAllByTestId('stars-counter'))
+      .toHaveLength(1);
   });
 
   it('should display no related topics state', () => {
@@ -54,7 +68,7 @@ describe('pages/topics/[topic]', () => {
     data.topic.relatedTopics = [];
     render(<PageTopic data={ data }  />);
 
-    expect(screen.queryAllByTestId('topic-item'))
+    expect(screen.queryAllByTestId('topic-pill'))
       .toHaveLength(0);
 
     expect(screen.getAllByRole('heading', { level: 1 }))
@@ -63,7 +77,6 @@ describe('pages/topics/[topic]', () => {
     expect(screen.getAllByRole('heading', { level: 2 }))
       .toHaveLength(1);
   });
-
 
   describe('getServerSideProps', () => {
     it('should call fetchGQL API', async () => {
