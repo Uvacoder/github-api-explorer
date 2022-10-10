@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { normalizeTopicName } from '~/utils/topic';
 import { fetchGQL } from '~/utils/fetchers';
 
@@ -7,9 +8,14 @@ export default function TopicPage({ data }) {
       <h1>{data.topic.name}</h1>
       <h2>Related topics</h2>
       {data.topic.relatedTopics.map((topic) => (
-        <div key={topic.id}>
-          {topic.name} ({topic.stargazerCount})
-        </div>
+        <Link
+          href={`/topics/${topic.name}`}
+          key={topic.id}
+        >
+          <a data-testid="topic-item">
+            {topic.name} ({topic.stargazerCount})
+          </a>
+        </Link>
       ))}
     </div>
   );
@@ -20,7 +26,7 @@ export async function getServerSideProps({ query }) {
 
   if (!name) {
     return {
-      notFound: true
+      notFound: true,
     };
   }
 
