@@ -6,6 +6,14 @@ const nextConfig = {
     locales: ['en'],
     defaultLocale: 'en'
   },
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        destination: '/topics/react',
+      },
+    ];
+  },
 }
 
 module.exports = nextConfig
