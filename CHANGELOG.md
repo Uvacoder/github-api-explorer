@@ -6,10 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+(feature/route-topic)
+## Added
+- config: `.env.example`
+- config: `jsconfig.json` absolute paths support using `~/`
+- utils(topic) { normalizeTopicName } function
+- utils(fetchers) { fetcher, fetchGQL } functions
+- pages: topics/[topic]
+
+## Changes
+- config: jest: add coverage options
+- config: jest: add moduleNameMapper for jest to resolve absolute path modules
+
 (feature/testing-setup)
 ## Added
 - build: jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom eslint-plugin-testing-library
 - config: added `jest.config.js` and `jest.setup.js`
+- config: test scripts to package.json `yarn test`
 
 ## Changed
 - config: added `plugin:testing-library/react` to ESLint config
