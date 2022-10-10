@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+(feature/style-updates)
+## Added
+- color-scheme: dark support
+
 (feature/page-404)
 ## Added
 - custom 404 page to avoid style overrides showing scrollbar
