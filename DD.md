@@ -150,11 +150,11 @@ function normalizeTopicName(name = '') {
 
 	return name
 		// return the unicode normalization form of the string
-		?.normalize('NFKD') 
+		?.normalize('NFKD')
 		// convert the string value to lower case
-		.toLowerCase() 
+		.toLowerCase()
 		// remove any Emoji and diacritics
-		.replace(/\p{Emoji_Component}|\p{Extended_Pictographic}|\p{Diacritic}/gu, '') 
+		.replace(/\p{Emoji_Component}|\p{Extended_Pictographic}|\p{Diacritic}/gu, '')
 		// remove whitespace from both ends
 		.trim()
 		// replace all remaining space-characters with dash
@@ -174,7 +174,7 @@ Depending on our needs, we can hide the request that includes our token behind a
 
 ### Search Capability
 
-As mentioned in the previous point, we could allow users to search any topic name by providing an [API Route](https://nextjs.org/docs/api-routes/introduction) as a mediator between users, our signed requests and the GitHub API. 
+As mentioned in the previous point, we could allow users to search any topic name by providing an [API Route](https://nextjs.org/docs/api-routes/introduction) as a mediator between users, our signed requests and the GitHub API.
 
 **Note:** Whichever method we choose, we should ensure user input is [normalized](#normalize-user-input) to provide a better experience and return the most accurate results possible.
 
@@ -222,3 +222,20 @@ If we think about it, our [search functionality](#search-capability) could also 
 #### Conclusion
 
 We could use a single page (powered by dynamic routes) to display Topics data. Each related topic can link to the same page updating the corresponding dynamic values. Next.js allow us to create [dynamic routes](https://nextjs.org/docs/routing/dynamic-routes) pretty easily.
+
+## Future Improvements
+
+### Code Structuring
+
+I don't have problems with the current code structure. I am ok with the way it is.
+
+### Refactoring
+- **Search**:
+  - Simplify it.
+  - Make it work without javascript.
+  - Always display search button.
+
+### Additional Features
+
+- **PWA Installability support**: right now, it doesn't prevent us from delivering the main features but I think it would be useful to have quick way to access the app on desktop or mobile.
+- **Search**: help users autocompleting/suggesting actual topic names while they type.
