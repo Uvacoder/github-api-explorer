@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 (feature/page-topic-styles)
 ## Added
 - components: StarsCounter
+- components: TopicPill
 
 (feature/footer)
 ## Added
