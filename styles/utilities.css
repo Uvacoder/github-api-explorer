@@ -1,0 +1,21 @@
+.u-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.u-df { display: flex }
+.u-dif { display: inline-flex }
+.u-jcc { justify-content: center  }
+.u-aic { align-items: center }
+
+.u-fw400 { font-weight: 400 }
+.u-fw500 { font-weight: 500 }
+.u-fw600 { font-weight: 600 }
+.u-fw700 { font-weight: 700 }
