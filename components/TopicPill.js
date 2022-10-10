@@ -38,7 +38,7 @@ export default function TopicPill({
           border: 1px solid var(--accents-1);
           border-radius: 100px;
           box-shadow: var(--shadow-smallest);
-          transition-properties: color, border-color, box-shadow;
+          transition-property: color, border-color, box-shadow;
           transition-duration: 150ms;
           transition-timing-function: ease;
           outline: none;
