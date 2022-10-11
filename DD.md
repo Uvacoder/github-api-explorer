@@ -238,4 +238,8 @@ I don't have problems with the current code structure. I am ok with the way it i
 ### Additional Features
 
 - **PWA Installability support**: right now, it doesn't prevent us from delivering the main features but I think it would be useful to have quick way to access the app on desktop or mobile.
-- **Search**: help users autocompleting/suggesting actual topic names while they type.
+- **Search**: 
+  - help users autocompleting/suggesting actual topic names while they type.
+  - add `/` keyboard shortcut to focus search input
+  - add skip to content button on tab - [source](https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/)
+- **OG Image**: generate dynamic og:images to improve conversion. this might not be needed for this app, but it would be a good chance to try out vercel's og image generation library - [blog](https://vercel.com/blog/introducing-vercel-og-image-generation-fast-dynamic-social-card-images).
